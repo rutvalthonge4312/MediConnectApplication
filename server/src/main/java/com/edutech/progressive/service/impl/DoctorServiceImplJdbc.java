@@ -1,5 +1,6 @@
 package com.edutech.progressive.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.edutech.progressive.entity.Doctor;
@@ -9,7 +10,7 @@ public class DoctorServiceImplJdbc implements DoctorService {
 
     @Override
     public List<Doctor> getAllDoctors() {
-        return null;
+        return new ArrayList<>();
     }
 
     public void updateDoctor(Doctor doctor) {
@@ -29,7 +30,7 @@ public class DoctorServiceImplJdbc implements DoctorService {
 
     @Override
     public List<Doctor> getDoctorSortedByExperience() {
-        return null;
+        return new ArrayList<>();
     }
 
 }

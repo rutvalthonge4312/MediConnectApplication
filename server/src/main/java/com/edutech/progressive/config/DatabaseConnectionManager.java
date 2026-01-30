@@ -1,6 +1,7 @@
 package com.edutech.progressive.config;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -10,7 +11,7 @@ public class DatabaseConnectionManager {
 
     private static final Properties properties =  new Properties();
 
-    private static void loadProperties(){
+    private static void loadProperties() throws IOException{
         try{
             properties.load(new FileInputStream("application.properties"));
         }
@@ -20,7 +21,7 @@ public class DatabaseConnectionManager {
     }
 
     public static Connection getConnection()throws SQLException{
-        loadProperties();
+        // loadProperties();
         String user=properties.getProperty("spring.datasource.username");
         String pass=properties.getProperty("spring.datasource.password");
         String url=properties.getProperty("spring.datasource.url");

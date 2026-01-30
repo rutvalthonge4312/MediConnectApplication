@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.edutech.progressive.entity.Doctor;
 import com.edutech.progressive.entity.Patient;
 import com.edutech.progressive.service.PatientService;
 
@@ -20,12 +19,12 @@ public class PatientServiceImplArraylist implements PatientService  {
     @Override
     public Integer addPatient(Patient patient) {
         patientList.add(patient);
-        return 1;
+        return patient.getPatientId();
     }
 
     @Override
     public List<Patient> getAllPatientSortedByName() {
-        // Collections.sort(patientList);
+        Collections.sort(patientList);
         return patientList;
     }
 

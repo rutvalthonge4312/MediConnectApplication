@@ -1,5 +1,6 @@
 package com.edutech.progressive.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.edutech.progressive.entity.Clinic;
@@ -28,7 +29,7 @@ public class ClinicDAOImpl implements ClinicDAO {
 
     @Override
     public List<Clinic> getAllClinics() {
-        return null;
+        return new ArrayList<>();
     }
 
 }

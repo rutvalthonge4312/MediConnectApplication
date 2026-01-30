@@ -2,13 +2,27 @@ package com.edutech.progressive.entity;
 
 import java.sql.Date;
 
-public class Patient {
+public class Patient implements Comparable<Patient>{
     private int patientId;
     private String fullName;
     private Date dateOfBirth;
     private String contactNumber;
     private String email;
     private String address;
+
+    public Patient() {
+    }
+    public Patient(int patientId, String fullName, Date dateOfBirth, String contactNumber, String email,
+            String address) {
+        this.patientId = patientId;
+        this.fullName = fullName;
+        this.dateOfBirth = dateOfBirth;
+        this.contactNumber = contactNumber;
+        this.email = email;
+        this.address = address;
+    }
+
+
     public int getPatientId() {
         return patientId;
     }
@@ -45,16 +59,10 @@ public class Patient {
     public void setAddress(String address) {
         this.address = address;
     }
-    public Patient() {
-    }
-    public Patient(int patientId, String fullName, Date dateOfBirth, String contactNumber, String email,
-            String address) {
-        this.patientId = patientId;
-        this.fullName = fullName;
-        this.dateOfBirth = dateOfBirth;
-        this.contactNumber = contactNumber;
-        this.email = email;
-        this.address = address;
+   
+    @Override
+    public int compareTo(Patient o) {
+        return this.getFullName().compareTo(o.getFullName());
     }
 
 

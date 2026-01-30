@@ -1,5 +1,6 @@
 package com.edutech.progressive.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.edutech.progressive.entity.Patient;
@@ -28,7 +29,7 @@ public class PatientDAOImpl implements PatientDAO {
 
     @Override
     public List<Patient> getAllPatients() {
-        return null;
+        return new ArrayList<>();
     }
 
 }

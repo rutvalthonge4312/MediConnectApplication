@@ -1,5 +1,6 @@
 package com.edutech.progressive.service.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.edutech.progressive.entity.Clinic;
@@ -9,7 +10,7 @@ public class ClinicServiceImplJdbc implements ClinicService  {
 
     @Override
     public List<Clinic> getAllClinics() {
-       return null;
+       return new ArrayList<>();
     }
 
     @Override
